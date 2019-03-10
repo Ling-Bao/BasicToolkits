@@ -35,6 +35,15 @@ video_capture(video_path, save_path)
 :param save_path:
 :return: 
 ```
+#### 3.1 image_eva.py
+@Description: Compute SSIM, MSE and PSNR
+```
+class ImgEva
+
+@function: Compute SSIM, MSE and PSNR
+@method: ssim(), ssim_diff(), psnr(), psnr_diff()
+```
+
 
 ---
 ### 4 pyfiles
