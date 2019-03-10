@@ -16,6 +16,9 @@ endmacro(CPPLIB_UNSET_THIRD_PARTY_FOLDER)
 macro(CPPLIB_ADD_LIBRARY TARGET_NAME)
     # ${ARGN} will store the list of source files passed to this function.
     add_library(${TARGET_NAME} ${ARGN})
+    set_target_properties(${TARGET_NAME} PROPERTIES FOLDER
+        ${CPPLIB_TARGETS_ROOT_FOLDER}/${FOLDER_NAME})
+    install(TARGETS ${TARGET_NAME} DESTINATION lib/cpplib/)
 endmacro(CPPLIB_ADD_LIBRARY)
 
 # Replacement for the normal add_executable() command. The syntax remains the
@@ -24,4 +27,7 @@ endmacro(CPPLIB_ADD_LIBRARY)
 macro(CPPLIB_ADD_EXECUTABLE TARGET_NAME)
     # ${ARGN} will store the list of source files passed to this function.
     add_executable(${TARGET_NAME} ${ARGN})
+    set_target_properties(${TARGET_NAME} PROPERTIES FOLDER
+        ${CPPLIB_TARGETS_ROOT_FOLDER}/${FOLDER_NAME})
+    install(TARGETS ${TARGET_NAME} DESTINATION lib/cpplib/)
 endmacro(CPPLIB_ADD_EXECUTABLE)
