@@ -17,8 +17,7 @@ void testLocationChecker() {
     bool b_use_split = true;
 
     std::vector<std::string> polygon_paths;
-    polygon_paths.emplace_back("/Users/didi/visual-geometry/colmap/conf/polygon_fences.json");
-    polygon_paths.emplace_back("/Users/didi/visual-geometry/colmap/conf/polygon_fences.json1");
+    polygon_paths.emplace_back("path-to/polygon_fences.json");
     polygon_paths.emplace_back("");
 
     for(auto &polygon_path : polygon_paths) {
@@ -42,11 +41,11 @@ void testLocationChecker() {
     // Only for quickly testing for International Airport of T3 scene
     std::vector<std::string> model_names_test;
     model_names_test.emplace_back("");
-    model_names_test.emplace_back("/nfs/project/zhangjunmichael/ar_group/data/model/cm/CM_R1.4");
-    model_names_test.emplace_back("/nfs/project/zhangjunmichael/ar_group/data/model/t3/T3_F2_R2.5");
+    model_names_test.emplace_back("Model1");
+    model_names_test.emplace_back("Model2");
 
     for(auto &model_name_test : model_names_test) {
-        if (!model_name_test.compare("/nfs/project/zhangjunmichael/ar_group/data/model/t3/T3_F2_R2.5")) {
+        if (!model_name_test.compare("Model2")) {
             b_use_split = true;
         } else {
             b_use_split = false;
@@ -59,7 +58,7 @@ void testLocationChecker() {
 }
 
 bool testImageProcess() {
-    std::string image_path = "/Users/didi/image_process/image.jpg";
+    std::string image_path = "path-to/image.jpg";
     cv::Mat img = cv::imread(image_path);
     cv::Mat img_ = img.clone();
     if(img.empty()){
