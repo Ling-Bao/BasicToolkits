@@ -38,3 +38,4 @@ __pycache_
 *.sqlite3
 reload
 *.pid
+.DS_Store
