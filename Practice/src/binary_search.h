@@ -1,20 +1,9 @@
-/**
- * Copyright (c) {2020}-present, DiDi, Inc.
- * All rights reserved.
- *
- *   File: {binary_search.h}
- *   Author: {Baoling}
- *   Email: {baoling@didiglobal.com}
- *   Group: Visual Computing Group at DiDi
- *   Created: {2020-01-09}
- *   Description: {Todo: describe this file's function}
- */
-
 
 #ifndef CPP_WS_BINARY_SEARCH_H_
 #define CPP_WS_BINARY_SEARCH_H_
 
 #include <vector>
+#include <iostream>
 #include <cstdio>
 
 using namespace std;
