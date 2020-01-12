@@ -73,7 +73,7 @@ bool testImageProcess() {
     std::cout << "Width: " << img.cols << "\tHeight: " << img.rows << std::endl;
     ImageProcess img_process;
     img_process.SplitImageByROI(img);
-    cv::imwrite("/Users/didi/image_process/image_split.jpg", img);
+    cv::imwrite("path-to/image_split.jpg", img);
     std::cout << "Width: " << img.cols << "\tHeight: " << img.rows << std::endl;
 
     std::cout << "\n---------Start testing split v2.0.0---------" << std::endl;
@@ -81,7 +81,7 @@ bool testImageProcess() {
     cv::Point2d principal_point(int(img.cols / 2.), int(img.rows / 2.));
     double focal = 1007.46;
     img_process.SplitImageByROI(img_, principal_point, focal);
-    cv::imwrite("/Users/didi/image_process/image_split.jpg", img_);
+    cv::imwrite("path-to/image_split.jpg", img_);
     std::cout << "Width: " << img_.cols << "\tHeight: " << img_.rows << std::endl;
 
     return true;

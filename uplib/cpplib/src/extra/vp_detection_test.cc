@@ -63,11 +63,11 @@ void testVpDetection(string &image_path, bool b_show=false) {
                    int(vp_img[0][1]) : int(image.rows / 2.);
     cv::Rect roi(0, 0, image.cols, vp_split);
     image = image(roi);
-    imwrite("/Users/didi/image_process/image_split.jpg", image);
+    imwrite("path-to/image_split.jpg", image);
 }
 
 int main() {
-    string image_path = "/Users/didi/image_process/image.jpg";
+    string image_path = "path-to/image.jpg";
     std::cout << "\n---------Start testing vanishing detection---------\n" << std::endl;
     testVpDetection(image_path, true);
 }
