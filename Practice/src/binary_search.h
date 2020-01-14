@@ -21,7 +21,7 @@ int binary_search(vector<int> &data, int value) {
     int end = data.size();
 
     while (start <= end) {
-        int mid = (end - start) / 2;
+        int mid = (end + start) / 2;
         int cur = data[mid];
 
         if (value < cur) {
