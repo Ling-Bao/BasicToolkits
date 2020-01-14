@@ -44,7 +44,7 @@ void input() {
     vector<int> sort_data;
     int input_data;
     while (cin >> input_data) {
-        if (input_data == '\n') {
+        if (input_data == '\b') {
             break;
         }
 

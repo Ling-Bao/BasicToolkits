@@ -10,13 +10,13 @@ using namespace std;
 
 int main(int argc, char** argv) {
     // 二叉查找
-//    BINARY_SEARCH::input();
+    BINARY_SEARCH::input();
 
     // 获取链表倒数第k个元素
 //    FIND_K_NODE::input();
 
     // 斐波那契数列
-    FIBONACCI::input();
+//    FIBONACCI::input();
 
 
     return -1;
